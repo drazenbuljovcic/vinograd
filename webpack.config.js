@@ -15,13 +15,24 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js/, loader: 'babel', presets: ['es2015'], exclude: /node_modules/ },
-            { test: /\.sass/, loader: extract.extract('style', '!css!postcss!sass') }
+            { test: /\/src\/styles\/main.scss/, loader: extract.extract('style', '!css!postcss!sass') },
+            { test: /\.(png|gif|jpe?g|svg)$/,
+                loader: 'url',
+                query: {
+                    limit: 10000,
+                    name: 'images/[hash].[ext]'
+                }
+            }
         ]
     },
     postcss: [
         autoprefixer({})
     ],
     plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             filename: 'js/vendor.bundle.js',
             minChunks: Infinity,

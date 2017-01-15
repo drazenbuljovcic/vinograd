@@ -1,1 +1,3 @@
-import $ from 'jquery';
+import jQuery from 'jquery';
+
+import smoothstate from 'smoothstate';

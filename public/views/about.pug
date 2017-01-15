@@ -4,5 +4,8 @@ html
     title About
     include partials/head.partial.pug
   body
-    h1 Vinograd
+    .wrapper
+      include partials/header.partial.pug
+      div(id="main")
+        h1 Vinograd
     include partials/scripts.partial.pug
