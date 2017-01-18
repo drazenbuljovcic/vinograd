@@ -1,20 +1,18 @@
 import express from 'express';
-
-import i18n from 'i18n';
+import i18n from 'i18n-abide';
 
 const router = express.Router({mergeParams: true});
 
-// router.get(':locale', (req, res, next) => {
-//     console.log(req.params.locale);
-//     res.setLocale(req.params.locale);
-//     next();
-// })
+router.use((req, res, next) => {
+    // res.redirect(`/${req.lang}`);
+    next();
+})
+
 router.get('/', (req, res) => {
-    // console.log(res.__("Welcome"));
-    res.render('index');
+    res.render('index', { locales: i18n.getLocales(), currPath: req.path });
 })
 router.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', { locales: i18n.getLocales(), currPath: req.path });
 })
 
 export default router;

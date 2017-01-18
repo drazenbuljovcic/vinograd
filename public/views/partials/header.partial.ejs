@@ -1,0 +1,22 @@
+<header class="fixed width-100">
+    <div class="container flex center-block">
+        <h1 class="logo flexible"><a href="/<%= lang %>/">Logo</a></h1>
+        <nav class="flex">
+            <ul class="flex flex--center">
+                <li class="inline">
+                    <a href="/<%= lang %>/"><%= gettext('Home') %></a>
+                </li>
+                <li class="inline">
+                    <a href="/<%= lang %>/about"><%= gettext('About') %></a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="locale-container flex flex--center">
+            <% locales.forEach(function(locale) { %>
+                <li class="flexible locale">
+                    <a class="locale" href="/<%= locale %><%= currPath %>"><%= locale %></a>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+</header>

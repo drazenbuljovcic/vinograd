@@ -1,0 +1,22 @@
+<doctype html>
+<html lang="<%= lang %>" dir="<%= lang_dir %>">
+  <head>
+    <title>Vinograd - <%= gettext('Home') %></title>
+    <% include ./partials/head.partial.ejs %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <% include ./partials/header.partial.ejs %>
+      <div id="main" class="index-main">
+        <div class="hero">
+          <div class="container center-block hero-content flex">
+            <div class="headline">
+              <h1><%= gettext('Welcome') %></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% include ./partials/scripts.partial.ejs %>
+  </body>
+</html>

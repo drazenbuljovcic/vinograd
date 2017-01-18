@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2017-01-18 21:36+0000\n"
+
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:7
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/index.ejs:4
+msgid "Home"
+msgstr ""
+
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:10
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/about.ejs:4
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/about.ejs:11
+msgid "About"
+msgstr ""
+
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/index.ejs:14
+msgid "Welcome"
+msgstr ""

@@ -237,6 +237,11 @@ header {
         text-decoration: none;
         cursor: pointer;
         color: #333; }
+    header .container ul.locale-container li.locale a {
+      text-transform: uppercase;
+      color: #333;
+      text-decoration: none;
+      padding: 10px; }
 
 .index-main .hero {
   background-image: url(images/4a880bb71d53c6db8640c8d867e5be98.jpg);
