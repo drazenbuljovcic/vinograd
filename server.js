@@ -1,22 +1,19 @@
 'use strict';
-import path from 'path';
-import http from 'http';
-
-import express from 'express';
-import cookieParser from 'cookie-parser';
-
-import reload from 'reload';
-  
-import i18n from 'i18n-abide';
-
-import routes from './main.routes';
+const path = require('path'),
+      http = require('http'),
+      express = require('express'),
+      cookieParser = require('cookie-parser'),
+      i18n = require('i18n-abide');
 
 const app = express(),
     server = http.createServer(app),
+    routes = require('./main.routes'),
     port = process.env.port || 3000;
 
-if(process.env.NODE_ENV !== 'production')
+if(process.env.NODE_ENV !== 'production') {
+  const reload = require('reload')
   reload(server, app);
+}
 
 // Middleware //
 app.use(cookieParser());

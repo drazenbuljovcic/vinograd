@@ -8,7 +8,7 @@
   },
   "scripts": {
     "postinstall": "npm install -g babel-cli",
-    "start": "babel-node server.js",
+    "start": "node server.js",
     "start:dev": "node_modules/.bin/nodemon server.js --exec babel-node --ext ejs,js,css",
     "watch": "node_modules/.bin/webpack --progress --colors --watch",
     "t-merge": "node_modules/i18n-abide/bin/merge-po.sh locale",
@@ -40,11 +40,11 @@
     "express": "^4.14.0",
     "i18n-abide": "0.0.25",
     "jquery": "^3.1.1",
-    "reload": "^1.1.0",
     "smoothstate": "^0.7.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.6.1",
+    "reload": "^1.1.0",
     "babel-loader": "^6.2.10",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
