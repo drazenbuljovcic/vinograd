@@ -8,7 +8,7 @@ const path = require('path'),
 const app = express(),
     server = http.createServer(app),
     routes = require('./main.routes'),
-    port = process.env.port || 3000;
+    port = process.env.PORT || 3000;
 
 if(process.env.NODE_ENV !== 'production') {
   const reload = require('reload')
