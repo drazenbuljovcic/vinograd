@@ -5,8 +5,7 @@ import http from 'http';
 import express from 'express';
 import cookieParser from 'cookie-parser';
 
-if(process.env.NODE_ENV !== 'production')
-  import reload from 'reload';
+import reload from 'reload';
   
 import i18n from 'i18n-abide';
 
