@@ -12,7 +12,9 @@ import routes from './main.routes';
 const app = express(),
     server = http.createServer(app),
     port = process.env.port || 3000;
-reload(server, app);
+
+if(process.env.NODE_ENV !== 'production')
+  reload(server, app);
 
 // Middleware //
 app.use(cookieParser());
