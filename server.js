@@ -4,7 +4,10 @@ import http from 'http';
 
 import express from 'express';
 import cookieParser from 'cookie-parser';
-import reload from 'reload';
+
+if(process.env.NODE_ENV !== 'production')
+  import reload from 'reload';
+  
 import i18n from 'i18n-abide';
 
 import routes from './main.routes';
