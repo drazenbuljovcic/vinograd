@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "postinstall": "sudo npm install -g babel-cli",
-    "start": "babel-node server.js",
+    "postinstall": "npm install -g babel-cli",
+    "start": "node_modules/.bin/webpack --progress --colors && babel-node server.js",
     "start:dev": "node_modules/.bin/nodemon server.js --exec babel-node --ext ejs,js,css",
     "watch": "node_modules/.bin/webpack --progress --colors --watch",
     "t-merge": "node_modules/i18n-abide/bin/merge-po.sh locale",
