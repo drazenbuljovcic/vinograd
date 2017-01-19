@@ -1,13 +1,15 @@
 'use strict';
-const path = require('path'),
-      http = require('http'),
-      express = require('express'),
-      cookieParser = require('cookie-parser'),
-      i18n = require('i18n-abide');
+import path from 'path';
+import http from 'http';
+
+import express from 'express';
+
+import i18n from 'i18n-abide';
+
+import routes from './main.routes';
 
 const app = express(),
     server = http.createServer(app),
-    routes = require('./main.routes'),
     port = process.env.PORT || 3000;
 
 if(process.env.NODE_ENV !== 'production') {
@@ -16,7 +18,6 @@ if(process.env.NODE_ENV !== 'production') {
 }
 
 // Middleware //
-app.use(cookieParser());
 // I18N library
 app.use(i18n.abide({
   supported_languages: ['en', 'de'],
