@@ -7,7 +7,6 @@
     "node": "7.4.0"
   },
   "scripts": {
-    "postinstall": "npm install -g babel-cli",
     "start": "node server.js",
     "start:dev": "node_modules/.bin/nodemon server.js --exec babel-node --ext ejs,js,css",
     "watch": "node_modules/.bin/webpack --progress --colors --watch",
