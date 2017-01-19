@@ -4,10 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node_modules/.bin/nodemon server.js --exec babel-node --ext ejs,js,css,pug",
+    "postinstall": "sudo npm install -g babel-cli",
+    "start": "babel-node server.js",
+    "start:dev": "node_modules/.bin/nodemon server.js --exec babel-node --ext ejs,js,css",
     "watch": "node_modules/.bin/webpack --progress --colors --watch",
     "t-merge": "node_modules/i18n-abide/bin/merge-po.sh locale",
-    "t-extract": "node_modules/.bin/extract-pot --locale locale/ . && npm run t-merge",
+    "t-extract": "node_modules/.bin/extract-pot --locale locale/ .",
+    "t-extract-merge": "npm run t-extract && npm run t-merge",
     "t-compile": "node_modules/.bin/compile-json locale/ public/i18n/"
   },
   "repository": {

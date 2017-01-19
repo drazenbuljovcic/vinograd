@@ -3,11 +3,6 @@ import i18n from 'i18n-abide';
 
 const router = express.Router({mergeParams: true});
 
-router.use((req, res, next) => {
-    // res.redirect(`/${req.lang}`);
-    next();
-})
-
 router.get('/', (req, res) => {
     res.render('index', { locales: i18n.getLocales(), currPath: req.path });
 })

@@ -63,7 +63,6 @@ webpackJsonp([0],[
 
 	exports.default = function ($) {
 	  'use strict';
-	  // console.log('About', $);
 	}(_jquery2.default);
 
 /***/ },

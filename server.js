@@ -14,7 +14,7 @@ const app = express(),
     port = process.env.port || 3000;
 reload(server, app);
 
-// Middleware
+// Middleware //
 app.use(cookieParser());
 // I18N library
 app.use(i18n.abide({
@@ -23,15 +23,14 @@ app.use(i18n.abide({
   translation_directory: 'public/i18n',
   locale_on_url: true
 }));
-
+// Views
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'public', 'views'));
-
+// Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/', routes);
-
 app.get('*', (req, res) => res.render('404.ejs'));
 
 server.listen(port, () => console.log(`Listening on port ${port}`));
