@@ -162,8 +162,6 @@ label {
 .wrapper {
   height: 100%; }
   .wrapper header {
-    -webkit-transition-timing-function: ease-in-out;
-            transition-timing-function: ease-in-out;
     -webkit-animation-name: comeDown;
             animation-name: comeDown;
     -webkit-animation-duration: .7s;
@@ -223,8 +221,8 @@ header {
   z-index: 1;
   color: white;
   background-color: transparent;
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out; }
+  -webkit-transition: all 0.4s cubic-bezier(0.42, 0, 0.4, 1.74);
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.4, 1.74); }
   header.header-transition {
     height: 80px;
     background-color: white;
