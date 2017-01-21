@@ -10,3 +10,6 @@ which will extract the translations to the locale root folder and merge the tran
 with every language available.
 Next, translate every word or phrase manually and run npm run t-compile, which will compile the
 translated strings to the public/i18n folder, which is used for text referencing for views.
+
+`` colors
+http://www.colourlovers.com/palette/114669/White_Wines

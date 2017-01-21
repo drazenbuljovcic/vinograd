@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-19 20:03+0000\n"
+"POT-Creation-Date: 2017-01-21 18:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -10,16 +10,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:7
-#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/index.ejs:4
-msgid "Home"
-msgstr "Zuhause"
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:9
+msgid "Nav-main"
+msgstr ""
 
-#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:10
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:12
+msgid "Nav-services"
+msgstr ""
+
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:15
+msgid "Nav-tourism"
+msgstr ""
+
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/partials/header.partial.ejs:18
+msgid "Nav-health"
+msgstr ""
+
 #: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/about.ejs:4
 #: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/about.ejs:11
 msgid "About"
 msgstr "Etwa"
+
+#: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/index.ejs:4
+msgid "Home"
+msgstr "Zuhause"
 
 #: /home/dbuljovcic/Documents/projects/play/vinograd/public/views/index.ejs:14
 msgid "Welcome"

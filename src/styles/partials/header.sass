@@ -1,17 +1,42 @@
+@import '../_variables.sass'
+
 header
-  height: 80px
+  height: 150px
   z-index: 1
+  color: $white-font
   background-color: transparent
-  transition: all .15s ease-in-out
+  transition: $transition-all-15
   &.header-transition
-    background-color: white
-    color: #333
+    height: 80px
+    background-color: $white-font
+    color: $dark-font
+    .container
+      border-bottom: 2px solid transparentize($white-font, 1)
+      h1.logo
+        padding: 15px
+        a
+          transform: scale(1) translate(20px, 0px)
+      nav ul li a
+        color: $dark-font
+      ul.locale-container li.locale a
+        color: $dark-font
   .container
-    border-bottom: 2px solid transparentize(white, .4)
+    transition: $transition-all-15
+    border-bottom: 2px solid transparentize($white-font, .4)
     padding: 0 10px
     h1.logo
-      padding: 10px
-      line-height: 1.5em
+      padding: 15px
+      font-size: 0
+      a
+        width: 50px
+        height: 50px
+        transition: $transition-all-15
+        transform-origin: top left
+        transform: scale(2) translate(30px, 5px)
+        background:
+          image: url('../images/wine-logo.svg')
+          size: contain
+          repeat: no-repeat
     nav ul
       li
         padding: 10px
@@ -19,11 +44,13 @@ header
         a
           text-decoration: none
           cursor: pointer
-          color: #333
+          color: $white-font
+          font-size: 1.1em
+          letter-spacing: 1px
     ul.locale-container
       li.locale
         a
           text-transform: uppercase
-          color: #333
+          color: $white-font
           text-decoration: none
           padding: 10px

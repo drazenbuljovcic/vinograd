@@ -39,7 +39,9 @@ webpackJsonp([0],[
 
 	  $(window).scroll(function () {
 	    $('header').removeClass('header-transition');
-	    if ($(window).scrollTop() > 0) $('header').addClass('header-transition');
+	    if ($(window).scrollTop() > 0) {
+	      if (!$('header').hasClass('header-transition')) $('header').delay(200).addClass('header-transition');
+	    }
 	  });
 	})(_jquery2.default);
 
