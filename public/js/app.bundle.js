@@ -37,10 +37,16 @@ webpackJsonp([0],[
 	    }
 	  }).data('smoothState'); // makes public methods available
 
-	  $(window).scroll(function () {
+	  function init() {
 	    $('header').removeClass('header-transition');
+	  }
+	  init();
+
+	  $(window).scroll(function () {
 	    if ($(window).scrollTop() > 0) {
 	      if (!$('header').hasClass('header-transition')) $('header').delay(200).addClass('header-transition');
+	    } else {
+	      $('header').removeClass('header-transition');
 	    }
 	  });
 	})(_jquery2.default);

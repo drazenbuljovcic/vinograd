@@ -20,11 +20,17 @@ require('../styles/main.scss');
       }
     }).data('smoothState'); // makes public methods available
 
-    $(window).scroll(() => {
+    function init() {
       $('header').removeClass('header-transition');
+    }
+    init();
+
+    $(window).scroll(() => {
       if ($(window).scrollTop() > 0) {
         if(!$('header').hasClass('header-transition'))
           $('header').delay(200).addClass('header-transition');
+      } else {
+        $('header').removeClass('header-transition');
       }
-    })
+    });
 })(jQuery);
