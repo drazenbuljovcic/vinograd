@@ -5,7 +5,12 @@
 
 @import '_layout.sass';
 
-@import 'partials/index.scss';
-@import 'pages/index.scss';
+// Partials
+@import 'partials/header.sass';
+@import 'partials/footer.sass';
+
+// Pages
+@import 'pages/index.sass';
+@import 'pages/about.sass';
 
 @import url(https://fonts.googleapis.com/css?family=Cookie:400&subset=latin);

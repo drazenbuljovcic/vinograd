@@ -23,6 +23,10 @@ require('../styles/main.scss');
     function init() {
       $('header').removeClass('header-transition');
     }
+    function mobileNavToggle() {
+
+    }
+
     init();
 
     $(window).scroll(() => {
@@ -33,4 +37,8 @@ require('../styles/main.scss');
         $('header').removeClass('header-transition');
       }
     });
+
+    $('.mobile-nav-toggle').on('click', () => {
+      $('nav').toggleClass('mobile-nav-down')
+    })
 })(jQuery);

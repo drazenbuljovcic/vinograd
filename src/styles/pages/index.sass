@@ -1,15 +1,16 @@
 @import '../_variables.sass'
 
 .index-main
-  .hero
+  section.hero
     background: url('../images/hero.jpg')
     background-size: cover
-    background-position: top -20px
     box-shadow: inset 0 0 0px 1000px darken(transparentize($red-wine, .15), 10%)
     height: 100vh
     .hero-content
+      height: 100%
       .headline
         width: 550px
+        margin: 0px 20px
         background: 
           color: $gold-wine
         h1
@@ -17,3 +18,27 @@
           font-size: 5em
           font-family: 'Cookie', serif
           color: $dark-font
+  section.section-center
+    height: 300px
+    background: green
+  section.section-services
+    height: 300px
+    background: orange
+  section.section-tourism
+    height: 300px
+    background: red
+  section.section-health
+    height: 300px
+    background: yellow
+
+@media screen and (max-width: 1260px)
+  .index-main section.hero
+    .hero-content
+      .headline
+        width: auto
+        background: transparent
+      h1
+        align-self: center
+        color: $white-font !important
+
+  

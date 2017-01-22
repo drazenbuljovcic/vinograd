@@ -1,4 +1,4 @@
-<doctype html>
+<!DOCTYPE html>
 <html lang="<%= lang %>" dir="<%= lang_dir %>">
   <head>
     <title>Vinograd - <%= gettext('Home') %></title>
@@ -8,14 +8,27 @@
     <div class="wrapper">
       <% include ./partials/header.partial.ejs %>
       <div id="main" class="index-main">
-        <div class="hero">
+        <section class="hero">
           <div class="hero-content container center-block">
             <div class="headline flex flex--column flex--center height-100">
               <h1 class="self--start">"<%= gettext('Welcome') %>" - <%= gettext('Author') %></h1>
             </div>
           </div>
-        </div>
+        </section> <!-- hero -->
+        <section class="section-center">
+        
+        </section> <!-- section-center -->
+        <section class="section-services">
+        
+        </section> <!-- section-services -->
+        <section class="section-tourism">
+        
+        </section> <!-- section-tourism -->
+        <section class="section-health">
+        
+        </section> <!-- section-health -->
       </div>
+      <% include ./partials/footer.partial.ejs %>
     </div>
     <% include ./partials/scripts.partial.ejs %>
   </body>

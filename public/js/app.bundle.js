@@ -40,6 +40,8 @@ webpackJsonp([0],[
 	  function init() {
 	    $('header').removeClass('header-transition');
 	  }
+	  function mobileNavToggle() {}
+
 	  init();
 
 	  $(window).scroll(function () {
@@ -48,6 +50,10 @@ webpackJsonp([0],[
 	    } else {
 	      $('header').removeClass('header-transition');
 	    }
+	  });
+
+	  $('.mobile-nav-toggle').on('click', function () {
+	    $('nav').toggleClass('mobile-nav-down');
 	  });
 	})(_jquery2.default);
 

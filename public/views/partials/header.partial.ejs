@@ -1,34 +1,38 @@
 <header class="fixed width-100">
     <div class="container height-100 flex center-block">
-        <h1 class="logo flexible">
-            <a href="/<%= lang %>/" class="inline height-100">Logo</a>
+        <h1 class="logo flex flex--center flexible">
+            <a href="/<%= lang %>/" class="inline height-100"></a>
+            <span><%= gettext('Tagline') %></span>
         </h1>
+        <div class="mobile-nav-toggle self--center"></div>
         <nav class="flex">
-            <ul class="flex flex--center">
-                <li class="inline">
+            <ul class="flex flex--center width-100">
+                <li class="inline flexible">
                     <a href="/<%= lang %>/"><%= gettext('Nav-main') %></a>
                 </li>
-                <li class="inline">
+                <li class="inline flexible">
                     <a href="/<%= lang %>/about"><%= gettext('Nav-services') %></a>
                 </li>
-                <li class="inline">
+                <li class="inline flexible">
                     <a href="/<%= lang %>/about"><%= gettext('Nav-tourism') %></a>
                 </li>
-                <li class="inline">
+                <li class="inline flexible">
                     <a href="/<%= lang %>/about"><%= gettext('Nav-health') %></a>
+                </li>
+                <li>
+                    <ul class="locale-container flex flex--row flex--center">
+                        <% locales.forEach(function(locale) { %>
+                            <li class="flexible locale">
+                                <% if(locale === 'en') { %>
+                                    <a class="locale locale-en" href="/<%= locale %><%= currPath %>"><%= locale %></a>
+                                <% } else if(locale === 'de') { %>
+                                    <a class="locale locale-de" href="/<%= locale %><%= currPath %>"><%= locale %></a>
+                                <% } %>
+                            </li>
+                        <% }) %>
+                    </ul>                
                 </li>
             </ul>
         </nav>
-        <ul class="locale-container flex flex--center">
-            <% locales.forEach(function(locale) { %>
-                <li class="flexible locale">
-                    <% if(locale === 'en') { %>
-                        <a class="locale locale-en" href="/<%= locale %><%= currPath %>"><%= locale %></a>
-                    <% } else if(locale === 'de') { %>
-                        <a class="locale locale-de" href="/<%= locale %><%= currPath %>"><%= locale %></a>
-                    <% } %>
-                </li>
-            <% }) %>
-        </ul>
     </div>
 </header>
