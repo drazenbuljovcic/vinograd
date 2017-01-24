@@ -35,10 +35,30 @@
   .index-main section.hero
     .hero-content
       .headline
-        width: auto
+        width: 100%
+        margin: 0
         background: transparent
       h1
         align-self: center
         color: $white-font !important
 
-  
+@media screen and (max-width: $mobile-breakpoint) and (orientation: portrait)
+  .index-main section.hero
+    .hero-content
+      .headline
+        h1
+          font-size: 3em
+@media screen and (max-width: $mobile-breakpoint) and (orientation: landscape)
+  .index-main section.hero
+    height: 500px
+    .hero-content
+      .headline
+        h1
+          font-size: 3em
+@media screen and (max-width: $tablet-vertical-breakpoint) and (orientation: landscape)
+  .index-main section.hero
+    height: 500px
+    .hero-content
+      .headline
+        h1
+          font-size: 3em
