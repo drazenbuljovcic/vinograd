@@ -304,7 +304,8 @@ header {
       font-size: 1em; }
       header .container h1.logo a {
         width: 35px;
-        height: 35px; }
+        height: 35px;
+        margin-left: 20px; }
     header .container div.mobile-nav-toggle {
       display: block;
       color: white;
@@ -341,6 +342,12 @@ header {
 footer {
   background: #2c3e50;
   height: 600px; }
+  footer div.created-by {
+    padding: 20px; }
+    footer div.created-by span {
+      font-size: .8em; }
+      footer div.created-by span a {
+        color: #D0D08D; }
 
 .index-main section.hero {
   background: url(images/0ea912c5eed1129c0a0a8a93c66b51dd.jpg);
@@ -361,19 +368,19 @@ footer {
 
 .index-main section.section-center {
   height: 300px;
-  background: green; }
+  background: yellow; }
 
 .index-main section.section-services {
   height: 300px;
-  background: orange; }
+  background: brown; }
 
 .index-main section.section-tourism {
   height: 300px;
-  background: red; }
+  background: cornflowerblue; }
 
 .index-main section.section-health {
   height: 300px;
-  background: yellow; }
+  background: lightgreen; }
 
 @media screen and (max-width: 1260px) {
   .index-main section.hero .hero-content .headline {

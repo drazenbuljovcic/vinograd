@@ -1,25 +1,30 @@
 <header class="fixed width-100">
     <div class="container height-100 flex center-block">
         <h1 class="logo flex flex--start flexible">
-            <a href="/<%= lang %>/" class="self--center"></a>
+            <!--<a href="/<%= lang %>/" class="self--center"></a>-->
+            <a href="/" class="self--center"></a>
             <span class="self--center"><%= gettext('Tagline') %></span>
         </h1>
         <div class="mobile-nav-toggle self--center"></div>
         <nav class="flex">
             <ul class="flex flex--center width-100">
                 <li class="inline flexible">
-                    <a href="/<%= lang %>/"><%= gettext('Nav-main') %></a>
+                    <!--<a href="/<%= lang %>/"><%= gettext('Nav-main') %></a>-->
+                    <a href="/"><%= gettext('Nav-main') %></a>
                 </li>
                 <li class="inline flexible">
-                    <a href="/<%= lang %>/about"><%= gettext('Nav-services') %></a>
+                    <!--<a href="/<%= lang %>/services"><%= gettext('Nav-services') %></a>-->
+                    <a href="/services"><%= gettext('Nav-services') %></a>
                 </li>
                 <li class="inline flexible">
-                    <a href="/<%= lang %>/about"><%= gettext('Nav-tourism') %></a>
+                    <!--<a href="/<%= lang %>/tourism"><%= gettext('Nav-tourism') %></a>-->
+                    <a href="/tourism"><%= gettext('Nav-tourism') %></a>
                 </li>
                 <li class="inline flexible">
-                    <a href="/<%= lang %>/about"><%= gettext('Nav-health') %></a>
+                    <!--<a href="/<%= lang %>/health"><%= gettext('Nav-health') %></a>-->
+                    <a href="/health"><%= gettext('Nav-health') %></a>
                 </li>
-                <li>
+                <!--<li>
                     <ul class="locale-container flex flex--row flex--center">
                         <% locales.forEach(function(locale) { %>
                             <li class="flexible locale">
@@ -31,7 +36,7 @@
                             </li>
                         <% }) %>
                     </ul>                
-                </li>
+                </li>-->
             </ul>
         </nav>
     </div>
