@@ -14,10 +14,10 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.js/, loader: 'babel', presets: ['es2015'], exclude: /node_modules/ },
-            { test: /\/src\/styles\/main.scss/, loader: extract.extract('style', '!css!postcss!sass') },
+            { test: /\.js/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\/src\/styles\/main.scss/, loader: extract.extract({ fallbackLoader: 'style-loader', loader: 'css-loader!postcss-loader!sass-loader'} )},
             { test: /\.(png|gif|jpe?g|svg)$/,
-                loader: 'url',
+                loader: 'url-loader',
                 query: {
                     limit: 10000,
                     name: 'images/[hash].[ext]'
@@ -25,9 +25,6 @@ module.exports = {
             }
         ]
     },
-    postcss: [
-        autoprefixer({})
-    ],
     plugins: [
         new webpack.ProvidePlugin({
             $: "jquery",
@@ -37,6 +34,13 @@ module.exports = {
             filename: 'js/vendor.bundle.js',
             minChunks: Infinity,
             name: 'vendor'
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer({})
+                ]
+            }
         }),
         new extract('app.bundle.css')
     ]
